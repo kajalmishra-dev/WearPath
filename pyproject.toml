@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wear-path"
+version = "0.1.0"
+description = "Industrial sensor data pipeline and predictive maintenance analytics using NASA C-MAPSS"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+authors = [{ name = "WearPath" }]
+keywords = [
+    "data-engineering",
+    "predictive-maintenance",
+    "time-series",
+    "nasa-cmapss",
+    "duckdb",
+]
+dependencies = [
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "duckdb>=1.0.0",
+    "pyarrow>=15.0.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "jupyter>=1.0.0",
+    "scikit-learn>=1.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+wear-path = "wear_path.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
