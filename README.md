@@ -186,7 +186,7 @@ python scripts/run_pipeline.py --variant FD001 --split train
 jupyter notebook notebooks/sensor_analysis.ipynb
 ```
 
-Or open the notebook in VS Code / Cursor and run all cells after the pipeline completes.
+Or open the notebook in VS Code and run all cells after the pipeline completes.
 
 ## Run Tests
 
